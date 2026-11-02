@@ -1,16 +1,27 @@
 import type { ReactNode } from "react";
 
-import { ShaderFlow } from "../shaders/shader-flow";
+import GradientWaves from "@/components/backgrounds/GradientWaves";
 
 export function PageBackdrop(): ReactNode {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-225 overflow-hidden"
+      className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
     >
-      <div className="absolute inset-0 opacity-50 md:opacity-100">
-        <ShaderFlow brightness={3} iterations={10} flowSpeed={[0, 0.1]} />
-      </div>
+      <GradientWaves
+        horizonColor="#a5a79b"
+        waveColor="#e8d2b5"
+        crestColor="#590907" 
+        speed={0.4}
+        amplitude={2.5}
+        relief={1}
+        lightAngle={120}
+        brightness={1.4}
+        mouseInteraction
+        swellOnClick
+        lightMode
+        style={{ width: "100%", height: "100%", position: "relative" }}
+      />
     </div>
   );
 }

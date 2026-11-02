@@ -17,7 +17,7 @@ export const metadata: Metadata = createMetadata({
 
 export default function AboutPage(): ReactNode {
   return (
-    <main id="main-content" className="flex flex-1 flex-col">
+    <main id="main-content" className="relative z-10 flex flex-1 flex-col">
       <section className="mx-auto w-full max-w-312 pt-40 sm:pt-56">
         <PolaroidStrip />
       </section>
